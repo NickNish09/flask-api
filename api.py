@@ -58,4 +58,10 @@ def api_id():
     # Python dictionaries to the JSON format.
     return jsonify(results)
 
+
+@app.route('/api/v1/resources/books', methods=['POST'])
+def create_book():
+    print(request.get_json()['url'])
+    return {'msg': 'Ola'}
+
 app.run()
